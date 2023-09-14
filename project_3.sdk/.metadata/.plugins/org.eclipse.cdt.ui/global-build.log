@@ -1,0 +1,2481 @@
+15:03:15 **** Build of project soc1_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+15:03:28 **** Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:150:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for(;;);
+   ^~~
+../src/helloworld.c:152:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5932	    720	   3252	   9904	   26b0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+15:17:10 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:148:26: error: 'receive_char' undeclared (first use in this function); did you mean 'recieve_char'?
+   XUartLite_Recv(&uart, &receive_char, 1);
+                          ^~~~~~~~~~~~
+                          recieve_char
+../src/helloworld.c:148:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:150:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for(;;);
+   ^~~
+../src/helloworld.c:152:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+15:17:42 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:148:25: warning: pointer targets in passing argument 2 of 'XUartLite_Recv' differ in signedness [-Wpointer-sign]
+   XUartLite_Recv(&uart, &recieve_char, 1);
+                         ^~~~~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:254:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Recv(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:150:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for(;;);
+   ^~~
+../src/helloworld.c:152:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6492	    720	   3252	  10464	   28e0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+15:47:42 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:149:25: warning: pointer targets in passing argument 2 of 'XUartLite_Recv' differ in signedness [-Wpointer-sign]
+   XUartLite_Recv(&uart, &recieve_char, 1);
+                         ^~~~~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:254:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Recv(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:151:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for(;;);
+   ^~~
+../src/helloworld.c:153:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30740	   1760	   3308	  35808	   8be0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+15:53:55 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:148:25: warning: pointer targets in passing argument 2 of 'XUartLite_Recv' differ in signedness [-Wpointer-sign]
+   XUartLite_Recv(&uart, &recieve_char, 1);
+                         ^~~~~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:254:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Recv(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:150:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for(;;);
+   ^~~
+../src/helloworld.c:152:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6492	    720	   3252	  10464	   28e0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:00:17 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+../src/helloworld.c:153:4: warning: 'd' is used uninitialized in this function [-Wuninitialized]
+    scanf('%d', d);
+    ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31952 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:00:36 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+../src/helloworld.c:153:4: warning: 'd' is used uninitialized in this function [-Wuninitialized]
+    scanf('%d', d);
+    ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31952 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:01:54 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:154:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', d);
+          ^~~~
+../src/helloworld.c:154:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:155:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:155:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+../src/helloworld.c:154:4: warning: 'd' is used uninitialized in this function [-Wuninitialized]
+    scanf('%d', d);
+    ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31952 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:02:17 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157540	   2124	   3312	 162976	  27ca0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:02:22 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+../src/helloworld.c:153:4: warning: 'd' is used uninitialized in this function [-Wuninitialized]
+    scanf('%d', d);
+    ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157540	   2124	   3312	 162976	  27ca0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:05:01 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', &d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157548	   2124	   3312	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:07:22 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d\n', &d);
+          ^~~~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157552	   2124	   3308	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:09:56 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d\n', &d);
+          ^~~~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157552	   2124	   3308	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:11:57 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', &d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157548	   2124	   3312	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:15:32 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:145:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:153:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', &d);
+          ^~~~
+../src/helloworld.c:153:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:154:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:154:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157548	   2124	   3312	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:16:19 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:144:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:152:10: warning: multi-character character constant [-Wmultichar]
+    scanf('%d', &d);
+          ^~~~
+../src/helloworld.c:152:10: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'int'
+ int scanf (const char *__restrict, ...)
+            ^
+../src/helloworld.c:153:11: warning: multi-character character constant [-Wmultichar]
+    printf('%d', d);
+           ^~~~
+../src/helloworld.c:153:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../src/helloworld.c:17:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:200:13: note: expected 'const char * restrict' but argument is of type 'int'
+ int printf (const char *__restrict, ...)
+             ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157548	   2124	   3312	 162984	  27ca8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:17:10 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:144:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157560	   2124	   3308	 162992	  27cb0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:23:25 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:144:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, msg_n, sizeof(msg_n));
+                         ^~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157560	   2124	   3308	 162992	  27cb0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:26:06 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 31889 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:26:21 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 27519 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:26:38 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157560	   2124	   3308	 162992	  27cb0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:26:46 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: soc1.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 23697 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: soc1.elf] Error 1
+16:26:59 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157560	   2124	   3308	 162992	  27cb0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:28:11 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157560	   2124	   3308	 162992	  27cb0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:28:41 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155428	   1708	   3296	 160432	  272b0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:49:23 **** Clean-only build of project soc1_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
+make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+16:49:24 **** Clean-only build of configuration Debug for project soc1 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  soc1.elf.size  soc1.elf
+' '
+16:49:25 **** Build of project soc1_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+16:49:38 **** Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155428	   1708	   3296	 160432	  272b0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:50:06 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155428	   1708	   3296	 160432	  272b0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+16:59:05 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155248	   1716	   3292	 160256	  27200	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+17:02:47 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:37:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:61:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:61:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:95:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:102:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155156	   1716	   3296	 160168	  271a8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+17:14:52 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:152:16: error: 'd' undeclared (first use in this function)
+   scanf("%d", &d);
+                ^
+../src/helloworld.c:152:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:159:13: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char *' [-Wformat=]
+     scanf("%d", &c);
+            ~^   ~~
+            %hhd
+../src/helloworld.c:156:8: warning: unused variable 'line' [-Wunused-variable]
+   char line[MAX_LENGHT] = {0};
+        ^~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:15:18 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:159:13: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char *' [-Wformat=]
+     scanf("%d", &c);
+            ~^   ~~
+            %hhd
+../src/helloworld.c:156:8: warning: unused variable 'line' [-Wunused-variable]
+   char line[MAX_LENGHT] = {0};
+        ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155276	   1716	   3296	 160288	  27220	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+17:18:17 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155352	   1716	   3292	 160360	  27268	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+17:27:46 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:99:19: error: too few arguments to function 'get_number'
+     int cur_num = get_number();
+                   ^~~~~~~~~~
+../src/helloworld.c:82:5: note: declared here
+ int get_number(char* line, size_t len){
+     ^~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:13: error: expected expression before '{' token
+      line = {0};
+             ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:31:29 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:99:19: error: too few arguments to function 'get_number'
+     int cur_num = get_number();
+                   ^~~~~~~~~~
+../src/helloworld.c:82:5: note: declared here
+ int get_number(char* line, size_t len){
+     ^~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:13: error: 'len' undeclared (first use in this function); did you mean 'line'?
+      memset(len,0,MAX_LENGHT);
+             ^~~
+             line
+../src/helloworld.c:165:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:31:37 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:99:19: error: too few arguments to function 'get_number'
+     int cur_num = get_number();
+                   ^~~~~~~~~~
+../src/helloworld.c:82:5: note: declared here
+ int get_number(char* line, size_t len){
+     ^~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:32:53 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'uart_receive':
+../src/helloworld.c:96:25: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+   XUartLite_Send(&uart, cur_char, 1);
+                         ^~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+../src/helloworld.c:99:19: error: too few arguments to function 'get_number'
+     int cur_num = get_number();
+                   ^~~~~~~~~~
+../src/helloworld.c:82:5: note: declared here
+ int get_number(char* line, size_t len){
+     ^~~~~~~~~~
+../src/helloworld.c:103:29: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
+       XUartLite_Send(&uart, msg_matrix, sizeof(msg_matrix));
+                             ^~~~~~~~~~
+In file included from ../src/helloworld.c:18:
+../../soc1_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:35:23 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:38:24: warning: missing braces around initializer [-Wmissing-braces]
+ int matrix [2][7][7] = {-1};
+                        ^
+                         {{}}
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 155612	   1716	   3296	 160624	  27370	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+17:50:44 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:68:19: error: 'matrix' undeclared (first use in this function); did you mean 'c_matrix'?
+         c_temp += matrix[0][i][r] * matrix[1][r][j];
+                   ^~~~~~
+                   c_matrix
+../src/helloworld.c:68:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:3: error: variable-sized object may not be initialized
+   int matrix [2][n][n] = {-1};
+   ^~~
+../src/helloworld.c:157:27: warning: excess elements in array initializer
+   int matrix [2][n][n] = {-1};
+                           ^
+../src/helloworld.c:157:27: note: (near initialization for 'matrix[0][0]')
+../src/helloworld.c:157:3: warning: excess elements in array initializer
+   int matrix [2][n][n] = {-1};
+   ^~~
+../src/helloworld.c:157:3: note: (near initialization for 'matrix[1]')
+../src/helloworld.c:157:26: warning: missing braces around initializer [-Wmissing-braces]
+   int matrix [2][n][n] = {-1};
+                          ^
+   {                       {{}}
+../src/helloworld.c:157:7: warning: unused variable 'matrix' [-Wunused-variable]
+   int matrix [2][n][n] = {-1};
+       ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:51:00 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:68:19: error: 'matrix' undeclared (first use in this function); did you mean 'c_matrix'?
+         c_temp += matrix[0][i][r] * matrix[1][r][j];
+                   ^~~~~~
+                   c_matrix
+../src/helloworld.c:68:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:157:7: warning: unused variable 'matrix' [-Wunused-variable]
+   int matrix [2][n][n];
+       ^~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:53:01 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:62:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:68:19: error: 'matrix' undeclared (first use in this function); did you mean 'c_matrix'?
+         c_temp += matrix[0][i][r] * matrix[1][r][j];
+                   ^~~~~~
+                   c_matrix
+../src/helloworld.c:68:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:62:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:55:20 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:56:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:56:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'reset':
+../src/helloworld.c:71:3: error: 'point_n' undeclared (first use in this function); did you mean 'print'?
+   point_n = 0;
+   ^~~~~~~
+   print
+../src/helloworld.c:71:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:72:3: error: 'point_m' undeclared (first use in this function); did you mean 'print'?
+   point_m = 0;
+   ^~~~~~~
+   print
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:149:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:148:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:56:13 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:56:24: warning: missing braces around initializer [-Wmissing-braces]
+   int c_matrix[7][7] = {-1};
+                        ^
+                         { }
+../src/helloworld.c:56:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[7][7] = {-1};
+       ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:150:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:149:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157672	   1716	   3252	 162640	  27b50	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+18:15:18 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:57:22: error: 'n' undeclared (first use in this function)
+   for(int i = 0; i < n ; i++){
+                      ^
+../src/helloworld.c:57:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:130:2: error: 'matrix' undeclared (first use in this function); did you mean 'mttlbx'?
+  matrix[size][size];
+  ^~~~~~
+  mttlbx
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:14: error: assignment to expression with array type
+    matrix[0] = read_matrix(n);
+              ^
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:16:00 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:130:2: error: 'matrix' undeclared (first use in this function); did you mean 'mttlbx'?
+  matrix[size][size];
+  ^~~~~~
+  mttlbx
+../src/helloworld.c:130:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:14: error: assignment to expression with array type
+    matrix[0] = read_matrix(n);
+              ^
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:16:12 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:147:9: warning: returning 'int (*)[(sizetype)(size)]' from a function with incompatible return type 'int **' [-Wincompatible-pointer-types]
+  return matrix;
+         ^~~~~~
+../src/helloworld.c:147:9: warning: function returns address of local variable [-Wreturn-local-addr]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:14: error: assignment to expression with array type
+    matrix[0] = read_matrix(n);
+              ^
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:17:46 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:147:9: warning: returning 'int (*)[(sizetype)(size)]' from a function with incompatible return type 'int **' [-Wincompatible-pointer-types]
+  return matrix;
+         ^~~~~~
+../src/helloworld.c:147:9: warning: function returns address of local variable [-Wreturn-local-addr]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:12: error: assignment to expression with array type
+    *matrix = read_matrix(n);
+            ^
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:17:58 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:147:9: warning: returning 'int (*)[(sizetype)(size)]' from a function with incompatible return type 'int **' [-Wincompatible-pointer-types]
+  return matrix;
+         ^~~~~~
+../src/helloworld.c:147:9: warning: function returns address of local variable [-Wreturn-local-addr]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:12: error: expected expression before '=' token
+    matrix* = read_matrix(n);
+            ^
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:18:36 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:147:9: warning: returning 'int (*)[(sizetype)(size)]' from a function with incompatible return type 'int **' [-Wincompatible-pointer-types]
+  return matrix;
+         ^~~~~~
+../src/helloworld.c:147:9: warning: function returns address of local variable [-Wreturn-local-addr]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:35: error: expected ')' before ';' token
+    memset(matrix[0],read_matrix(n);,sizeof(int)*n*n);
+                                   ^
+                                   )
+../src/helloworld.c:180:21: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
+    memset(matrix[0],read_matrix(n);,sizeof(int)*n*n);
+                     ^~~~~~~~~~~~~~
+In file included from ../../soc1_bsp/microblaze_0/include/xil_printf.h:9,
+                 from ../../soc1_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/helloworld.c:22:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'int' but argument is of type 'int **'
+ void *  memset (void *, int, size_t);
+         ^~~~~~
+../src/helloworld.c:180:4: error: too few arguments to function 'memset'
+    memset(matrix[0],read_matrix(n);,sizeof(int)*n*n);
+    ^~~~~~
+In file included from ../../soc1_bsp/microblaze_0/include/xil_printf.h:9,
+                 from ../../soc1_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/helloworld.c:22:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: declared here
+ void *  memset (void *, int, size_t);
+         ^~~~~~
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:18:44 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'read_matrix':
+../src/helloworld.c:147:9: warning: returning 'int (*)[(sizetype)(size)]' from a function with incompatible return type 'int **' [-Wincompatible-pointer-types]
+  return matrix;
+         ^~~~~~
+../src/helloworld.c:147:9: warning: function returns address of local variable [-Wreturn-local-addr]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:180:21: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
+    memset(matrix[0],read_matrix(n),sizeof(int)*n*n);
+                     ^~~~~~~~~~~~~~
+In file included from ../../soc1_bsp/microblaze_0/include/xil_printf.h:9,
+                 from ../../soc1_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/helloworld.c:22:
+c:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'int' but argument is of type 'int **'
+ void *  memset (void *, int, size_t);
+         ^~~~~~
+../src/helloworld.c:181:14: error: assignment to expression with array type
+    matrix[1] = read_matrix(n);
+              ^
+../src/helloworld.c:170:7: warning: unused variable 'point_m' [-Wunused-variable]
+   int point_m = 0;
+       ^~~~~~~
+../src/helloworld.c:169:7: warning: unused variable 'point_n' [-Wunused-variable]
+   int point_n = 0;
+       ^~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:22:40 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:28: error: 'size' undeclared (first use in this function); did you mean 'line'?
+     for (size_t i = 0; i < size; i++){
+                            ^~~~
+                            line
+../src/helloworld.c:162:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+18:22:49 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:54:7: warning: variable 'c_matrix' set but not used [-Wunused-but-set-variable]
+   int c_matrix[matrix_size][matrix_size];
+       ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157868	   1716	   3264	 162848	  27c20	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+18:24:47 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:66:10: warning: returning 'int (*)[(sizetype)(matrix_size)]' from a function with incompatible return type 'int ***' [-Wincompatible-pointer-types]
+   return c_matrix;
+          ^~~~~~~~
+../src/helloworld.c:66:10: warning: function returns address of local variable [-Wreturn-local-addr]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157868	   1716	   3264	 162848	  27c20	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+18:25:24 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'calc_result':
+../src/helloworld.c:66:10: warning: returning 'int (*)[(sizetype)(matrix_size)]' from a function with incompatible return type 'int ***' [-Wincompatible-pointer-types]
+   return c_matrix;
+          ^~~~~~~~
+../src/helloworld.c:66:10: warning: function returns address of local variable [-Wreturn-local-addr]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157868	   1716	   3264	 162848	  27c20	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+18:27:01 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 157868	   1716	   3264	 162848	  27c20	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+18:29:26 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:185:16: warning: passing argument 1 of 'calc_result' from incompatible pointer type [-Wincompatible-pointer-types]
+    calc_result(matrixes, result, n);
+                ^~~~~~~~
+../src/helloworld.c:53:25: note: expected 'int ***' but argument is of type 'int (*)[(sizetype)(n)][(sizetype)(n)]'
+ void calc_result(int*** src_matrix, int** res_matrix, int matrix_size){
+                  ~~~~~~~^~~~~~~~~~
+../src/helloworld.c:185:26: warning: passing argument 2 of 'calc_result' from incompatible pointer type [-Wincompatible-pointer-types]
+    calc_result(matrixes, result, n);
+                          ^~~~~~
+../src/helloworld.c:53:43: note: expected 'int **' but argument is of type 'int (*)[(sizetype)(n)]'
+ void calc_result(int*** src_matrix, int** res_matrix, int matrix_size){
+                                     ~~~~~~^~~~~~~~~~
+../src/helloworld.c:186:17: warning: passing argument 1 of 'print_matrix' from incompatible pointer type [-Wincompatible-pointer-types]
+    print_matrix(result, n);
+                 ^~~~~~
+../src/helloworld.c:128:25: note: expected 'int **' but argument is of type 'int (*)[(sizetype)(n)]'
+ void print_matrix(int** src, int size){
+                   ~~~~~~^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159348	   1716	   3264	 164328	  281e8	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+20:40:04 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:16: warning: passing argument 1 of 'calc_result' from incompatible pointer type [-Wincompatible-pointer-types]
+    calc_result(matrixes, result, n);
+                ^~~~~~~~
+../src/helloworld.c:48:25: note: expected 'int ***' but argument is of type 'int (*)[(sizetype)(n)][(sizetype)(n)]'
+ void calc_result(int*** src_matrix, int** res_matrix, int matrix_size){
+                  ~~~~~~~^~~~~~~~~~
+../src/helloworld.c:120:26: warning: passing argument 2 of 'calc_result' from incompatible pointer type [-Wincompatible-pointer-types]
+    calc_result(matrixes, result, n);
+                          ^~~~~~
+../src/helloworld.c:48:43: note: expected 'int **' but argument is of type 'int (*)[(sizetype)(n)]'
+ void calc_result(int*** src_matrix, int** res_matrix, int matrix_size){
+                                     ~~~~~~^~~~~~~~~~
+../src/helloworld.c:121:17: warning: passing argument 1 of 'print_matrix' from incompatible pointer type [-Wincompatible-pointer-types]
+    print_matrix(result, n);
+                 ^~~~~~
+../src/helloworld.c:71:25: note: expected 'int **' but argument is of type 'int (*)[(sizetype)(n)]'
+ void print_matrix(int** src, int size){
+                   ~~~~~~^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 159348	   1716	   3184	 164248	  28198	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+22:06:21 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:30: error: 'uart_id' undeclared (first use in this function); did you mean 'uart'?
+  XUartLite_Initialize(&uart, uart_id);
+                              ^~~~~~~
+                              uart
+../src/helloworld.c:86:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:91:9: warning: unused variable 'pointer' [-Wunused-variable]
+  size_t pointer = 0;
+         ^~~~~~~
+../src/helloworld.c:90:7: warning: unused variable 'line' [-Wunused-variable]
+  char line[MAX_LENGHT] = {0};
+       ^~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+22:07:01 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:91:9: warning: unused variable 'pointer' [-Wunused-variable]
+  size_t pointer = 0;
+         ^~~~~~~
+../src/helloworld.c:90:7: warning: unused variable 'line' [-Wunused-variable]
+  char line[MAX_LENGHT] = {0};
+       ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 158264	   1692	   3308	 163264	  27dc0	soc1.elf
+'Finished building: soc1.elf.size'
+' '
+22:07:20 **** Auto Build of configuration Debug for project soc1 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../soc1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: soc1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../soc1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "soc1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soc1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size soc1.elf  |tee "soc1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 158228	   1692	   3312	 163232	  27da0	soc1.elf
+'Finished building: soc1.elf.size'
+' '

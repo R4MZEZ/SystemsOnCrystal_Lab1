@@ -1,0 +1,17 @@
+15:02:37 INFO  : Registering command handlers for SDK TCF services
+15:02:38 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\User\SoC-1\project_3.sdk\temp_xsdb_launch_script.tcl
+15:02:42 INFO  : XSCT server has started successfully.
+15:02:44 INFO  : Successfully done setting XSCT server connection channel  
+15:02:44 INFO  : Successfully done setting SDK workspace  
+15:02:44 INFO  : Processing command line option -hwspec C:/Users/User/SoC-1/project_3.sdk/design_1_wrapper.hdf.
+16:47:55 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1694699275064,  Project:1694692934120
+16:47:55 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/Users/User/SoC-1/project_3.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:49:19 INFO  : Copied contents of C:/Users/User/SoC-1/project_3.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+16:49:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:49:22 INFO  : 
+16:49:23 INFO  : Updating hardware inferred compiler options for soc1.
+16:49:23 INFO  : Clearing existing target manager status.
+16:49:23 INFO  : Closing and re-opening the MSS file of ther project soc1_bsp
+16:49:23 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:49:25 WARN  : Linker script will not be updated automatically. Users need to update it manually.
